@@ -2,11 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget{
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    String decriptionDummy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia est at magna ullamcorper, et imperdiet nibh imperdiet. Donec vulputate, augue ac viverra placerat, velit orci porttitor est, ac elementum purus leo in arcu.";
     final description = Container(
       margin: new EdgeInsets.only(
         top: 20.0,
@@ -14,12 +19,35 @@ class DescriptionPlace extends StatelessWidget{
         right: 20.0
       ),
       child: new Text(
-        decriptionDummy,
+        descriptionPlace,
         style: const TextStyle(
+          fontFamily: "Lato",
           fontSize: 16.0,
           fontWeight: FontWeight.bold,
           color: Color(0xFF56575a)
         ),
+      ),
+    );
+
+    final star_border = Container(
+      margin: EdgeInsets.only(
+          top: 323.0,
+          right: 3.0
+      ),
+      child: Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611),
+      ),
+    );
+
+    final star_half = Container(
+      margin: EdgeInsets.only(
+          top: 323.0,
+          right: 3.0
+      ),
+      child: Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611),
       ),
     );
 
@@ -43,8 +71,9 @@ class DescriptionPlace extends StatelessWidget{
             right: 20.0
           ),
           child: Text(
-            "Duwili Ella",
+            namePlace,
                 style: TextStyle(
+                  fontFamily: "Lato",
                   fontSize: 30.0,
                   fontWeight: FontWeight.w900
                 ),
@@ -58,7 +87,7 @@ class DescriptionPlace extends StatelessWidget{
             star,
             star,
             star,
-            star
+            star_border
           ],
         )
 

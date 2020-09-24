@@ -7,6 +7,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  String decriptionDummy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia est at magna ullamcorper, et imperdiet nibh imperdiet. Donec vulputate, augue ac viverra placerat, velit orci porttitor est, ac elementum purus leo in arcu.";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hola Mundo"),
         ),
-        body: new DescriptionPlace(),
+        body: new DescriptionPlace("Bahamas", 4, decriptionDummy),
       )//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
