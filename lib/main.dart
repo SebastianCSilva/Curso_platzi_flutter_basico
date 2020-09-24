@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,9 +31,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Hola Mundo"),
         ),
-        body: Center(
-          child: Text("Hola mundo"),
-        ),
+        body: new DescriptionPlace(),
       )//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
