@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import "review_list.dart";
+import 'gradient_back.dart';
+import 'header_appbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,10 +33,19 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Hola Mundo"),
+        //body: new DescriptionPlace("Bahamas", 4, decriptionDummy),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: [
+                DescriptionPlace("Bahamas", 4, decriptionDummy),
+                ReviewList()
+              ],
+            ),
+            HeaderAppBar()
+          ],
+
         ),
-        body: new DescriptionPlace("Bahamas", 4, decriptionDummy),
       )//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

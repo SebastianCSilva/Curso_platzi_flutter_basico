@@ -74,6 +74,14 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - assets/img/cover1.jpg
+    - assets/img/images.jpg
+    - assets/img/Pogchamp.png
+    - assets/img/bahamas.jpg
+    - assets/img/osaka.jpg
+    - assets/img/seul.jpg
+
   fonts:
     - family: Lato
       fonts:
