@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_tripss_app/platzi_trips.dart';
 import 'description_place.dart';
 import "review_list.dart";
 import 'gradient_back.dart';
 import 'header_appbar.dart';
+import 'platzi_trips.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +12,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  String decriptionDummy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia est at magna ullamcorper, et imperdiet nibh imperdiet. Donec vulputate, augue ac viverra placerat, velit orci porttitor est, ac elementum purus leo in arcu.";
 
   @override
   Widget build(BuildContext context) {
@@ -32,21 +33,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scaffold(
-        //body: new DescriptionPlace("Bahamas", 4, decriptionDummy),
-        body: Stack(
-          children: <Widget>[
-            ListView(
-              children: [
-                DescriptionPlace("Bahamas", 4, decriptionDummy),
-                ReviewList()
-              ],
-            ),
-            HeaderAppBar()
-          ],
-
-        ),
-      )//MyHomePage(title: 'Flutter Demo Home Page'),
+      home: PlatziTrips()//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

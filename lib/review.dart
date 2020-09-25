@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class Review extends StatelessWidget{
 
   String pathImage = "assets/img/cover1.jpg";
